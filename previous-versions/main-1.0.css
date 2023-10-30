@@ -2,49 +2,22 @@ body {
     background-color: rgb(26, 26, 26);
     color: white;
     font-family: 'Inter', sans-serif;
-    margin: 20px;
+    margin-left: 20px;
 }
+
 .name-section {
-    margin-bottom: 0;
-    padding: 10px 20px; /* Add padding for spacing */
-    /* background: #333; */
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0;
 }
 
-.actual-name {
-    padding: 0;
-    margin: 0;
-}
-
-.name-top-left {
-    text-align: left;
-    flex: 1;
-}
-
-.name-top-right {
-    text-align: right;
-    flex: 1;
-}
-
-.big-post-name {
-    font-weight: bold;
-    font-size: 2em;
-    margin: 0;
-}
-
-.social-media-links {
-    display: inline-block;
-}
-
-.social-media-links img {
+.name-section img {
     width: 25px;
 }
 
-hr {
-    margin-top: 0;
+.social-media-links {
+    display: flex;
+    gap: 10px;
 }
 
 .name {
@@ -54,6 +27,16 @@ hr {
 
 .small-prefix-name {
     color: rgb(135, 135, 135);
+}
+
+.big-post-name {
+    font-weight: bold;
+    font-size: 2em;
+}
+
+hr {
+    margin-top: 0px;
+    margin-bottom: 20px;
 }
 
 .bio-section {

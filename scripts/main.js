@@ -1,8 +1,8 @@
 function changeName() {
     nameElement = document.querySelector('.js-name');
     if(nameElement.innerText === 'Iftu Bin Misbah') {
-        nameElement.innerHTML = 'Samio';
+        nameElement.innerHTML = "<p class='actual-name'><span class='small-prefix-name'>call me</span><span class='big-post-name'>Samio</span></p>";
     } else {
-        nameElement.innerHTML = 'Iftu Bin Misbah';
+        nameElement.innerHTML = "<p class='actual-name'><span class='big-post-name'>Iftu Bin Misbah</span></p>";
     }
 }

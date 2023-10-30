@@ -5,4 +5,4 @@
 ## Projects
 
 ### JavaScript
-- [Rock-Paper-Scissors Game](https://wsamio.github.io/Rock-Paper-Scissors/index.html)
+- [Rock-Paper-Scissors Game](https://wsamio.github.io/JavaScript/Projects/Rock-Paper-Scissors/index.html)

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rock - Paper - Scissors</title>
+    <!-- Google stylesheets to use Inter font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;700&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="styles/main.css">
+</head>
+<body>
+    <div class="game-content">
+        <div class="game-move-section">
+            <div>
+                <h1>Rock Paper Scissors</h1>
+            </div>
+            <div class="move-emojis-section">
+                <button class="move-button" onclick="playGame('rock');"><img class="move-icon" src="images/rock-emoji.png"></button>
+                <button class="move-button" onclick="playGame('paper');"><img class="move-icon" src="images/paper-emoji.png"></button>
+                <button class="move-button" onclick="playGame('scissors');"><img class="move-icon" src="images/scissors-emoji.png"></button>
+            </div>
+        </div>
+        <div class="result-section">
+            <div class="current-game">
+                <h2 class="js-rusult result"></h2>
+            </div>
+            <div>
+                <p class="current-game-moves"></p>
+            </div>
+            <div>
+                <p class="game-stats"></p>
+            </div>
+        </div>
+        <div class="game-reset-section">
+            <button class="js-reset-score-button reset-score-button" onclick="resetGame();">
+                Reset Score
+            </button>
+        </div>
+    </div>
+    <script src="scripts/main.js"></script>
+</body>
+</html>

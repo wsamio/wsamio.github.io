@@ -17,9 +17,9 @@
                 <h1>Rock Paper Scissors</h1>
             </div>
             <div class="move-emojis-section">
-                <button class="move-button" onclick="playGame('rock');"><img class="move-icon" src="images/rock-emoji.png"></button>
-                <button class="move-button" onclick="playGame('paper');"><img class="move-icon" src="images/paper-emoji.png"></button>
-                <button class="move-button" onclick="playGame('scissors');"><img class="move-icon" src="images/scissors-emoji.png"></button>
+                <button class="js-rock-button move-button"><img class="move-icon" src="images/rock-emoji.png"></button>
+                <button class="js-move-button move-button"><img class="move-icon" src="images/paper-emoji.png"></button>
+                <button class="js-scissors-button move-button"><img class="move-icon" src="images/scissors-emoji.png"></button>
             </div>
         </div>
         <div class="result-section">
@@ -36,6 +36,9 @@
         <div class="game-reset-section">
             <button class="js-reset-score-button reset-score-button" onclick="resetGame();">
                 Reset Score
+            </button>
+            <button class="js-auto-play-button auto-play-button" onclick="autoPlayGame();">
+                Auto Play
             </button>
         </div>
     </div>

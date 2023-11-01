@@ -70,11 +70,16 @@ hr {
 
 .project-cart {
     width: 200px;
+    height: 200px;
     border: 1px solid #ccc;
     padding: 10px;
     text-align: center;
     box-shadow: 0 0 5px rgba(255, 0, 0, 0.2);
     cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-right: 30px;
 }
 
 .project-cart img {
@@ -84,11 +89,19 @@ hr {
 
 .project-cart-title {
     font-size: 16px;
-    margin-top: 10px;
+    margin-top: auto;
+    text-align: center;
+    line-height: 1.2;
 }
+
 
 .project-link {
     text-decoration: none;
     color: inherit;
     display: inline-block;
+}
+
+.projects {
+    display: flex;
+    justify-content: left;
 }

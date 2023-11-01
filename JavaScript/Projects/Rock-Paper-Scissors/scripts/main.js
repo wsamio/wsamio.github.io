@@ -32,6 +32,48 @@ function computerMoveFunc() {
     }
 }
 
+let isAutoPlaying = false;
+let intervalId;
+
+function autoPlayGame() {
+    autoPlayButtonElement = document.querySelector('.js-auto-play-button');
+    if(!isAutoPlaying) {
+        intervalId = setInterval(() => {
+            const yourMove = computerMoveFunc();
+            playGame(yourMove);
+        }, 1000);
+        isAutoPlaying = true;
+        autoPlayButtonElement.innerHTML = 'Stop Play';
+    } else {
+        clearInterval(intervalId);
+        isAutoPlaying = false;
+        autoPlayButtonElement.innerHTML = 'Auto Play';
+    }
+}
+
+document.querySelector('.js-rock-button').addEventListener('click', () => {
+    playGame('rock');
+});
+
+document.querySelector('.js-move-button').addEventListener('click', () => {
+    playGame('paper');
+});
+
+document.querySelector('.js-scissors-button').addEventListener('click', () => {
+    playGame('scissors');
+});
+
+
+document.body.addEventListener('keydown', (event) => {
+    if(event.key == 'r' || event.key == 'R') {
+        playGame('rock');
+    } else if (event.key == 'p' || event.key == 'P') {
+        playGame('paper');
+    } else if(event.key == 's' || event.key == 'S') {
+        playGame('scissors');
+    }
+});
+
 function playGame(yourMove) {
     computerMove = computerMoveFunc();
 

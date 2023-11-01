@@ -31,11 +31,15 @@ img {
     cursor: pointer;
 }
 
-.game-move-section, .current-game, .current-game-moves, .result-section {
+.game-move-section,
+.current-game,
+.current-game-moves,
+.result-section {
     margin-bottom: 30px;
 }
 
-.reset-score-button {
+.reset-score-button,
+.auto-play-button {
     border: none;
     padding: 10px 15px;
     font-size: 15px;

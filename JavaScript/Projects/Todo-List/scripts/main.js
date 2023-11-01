@@ -13,8 +13,9 @@ function updateLocalStorage() {
 
 function renderTodoList() {
     let todoHtml = '';
-    for(let i = 0; i < todoList.length; i++) {
-        const todoObject = todoList[i];
+
+    // foreach loop in javascript
+    todoList.forEach((todoObject, index) => {
         // destructuring
         const { name, dueDate } = todoObject;
         const html =
@@ -25,14 +26,21 @@ function renderTodoList() {
         <div>
             ${dueDate}
         </div>
-        <button class="remove-todo-button" onclick="removeTodo(${i});">
+        <button class="js-remove-todo-button remove-todo-button">
             Delete
         </button>
         `;
         todoHtml += html;
-    }
-    todoListElement = document.querySelector('.js-todo-list');
+    });
+
+    const todoListElement = document.querySelector('.js-todo-list');
     todoListElement.innerHTML = todoHtml;
+
+    document.querySelectorAll('.js-remove-todo-button').forEach((removeButton, index) => {
+        removeButton.addEventListener('click', () => {
+            removeTodo(index);
+        });
+    });
 }
 
 renderTodoList();
@@ -62,6 +70,10 @@ function removeTodo(removeIndex) {
     updateLocalStorage()
     renderTodoList();
 }
+
+document.querySelector('.js-add-todo-button').addEventListener('click', () =>{
+    addTodo();
+});
 
 function addTodo() {
     const { name, dueDate } = getTodoInput('.js-todo-input', '.js-date-input');

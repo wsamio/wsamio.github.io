@@ -10,5 +10,5 @@ function changeName() {
 // take the current url form the browser
 const currentURL = window.location.href;
 
-document.getElementById('rock-paper-scissors').href = currentURL + "/JavaScript/Projects/Todo-List/index.html";
+document.getElementById('rock-paper-scissors').href = currentURL + "/JavaScript/Projects/Rock-Paper-Scissors/index.html";
 document.getElementById('todo-list').href = currentURL + "/JavaScript/Projects/Todo-List/index.html";
